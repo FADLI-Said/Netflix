@@ -8,87 +8,119 @@
     padding: 0;
 }
 
-
 body {
-    font-family: "Lato";
-    background-color: #1C2026;
-    color: white;
+    box-sizing: border-box;
+    font-family: 'Lato';
+    display: flex;
+    flex-direction: column;
+
+    .background-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+        /* Place le fond derrière le contenu */
+
+        .background-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Couvre toute la zone sans déformer l'image */
+            filter: blur(1rem);
+            /* Applique un flou de 8 pixels */
+        }
+
+        .background-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(20, 20, 20, 0.8);
+        }
+
+    }
+
 
     header {
-        background-image: linear-gradient(to bottom, #000000, transparent);
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        position: relative;
 
         .topbar {
-            width: 95%;
-            margin: 0 auto;
             display: flex;
             justify-content: space-between;
-
-            .Netflix {
-                font-family: "Bebas Neue";
-                color: red;
-                font-size: 3rem;
-                background-color: transparent;
-            }
+            align-items: center;
+            padding: 1rem 3rem;
+            background-image: linear-gradient(to bottom, #000000, transparent);
 
             a {
-                color: black;
-                background-color: white;
                 text-decoration: none;
-                align-self: center;
-                padding: 0.3rem 1rem;
-                border-radius: 1rem;
+            }
+
+            .Netflix {
+                color: red;
+                font-family: 'Bebas Neue';
+                font-size: 3rem;
+            }
+
+            a:nth-child(2) {
+                background-color: white;
+                color: black;
+                padding: 0.5rem 1.5rem;
+                border-radius: 100px;
                 font-weight: bold;
             }
         }
 
-        nav {
-            text-align: center;
-                padding: 0.5rem 1rem;
-                background: #000000;
-                width: max-content;
-                border-radius: 1rem;
-                align-self: center;
-                margin: 0 auto;
 
-            a {
-                padding: 0.5rem 1rem;
-                // background: #000000;
-                border-radius: 1rem;
-                text-decoration: none;
-                color: white;
-            }
+    }
 
-            a:hover{
-                transition: 1.2s;
-                background-color: white;
-                color: #000000;
-            }
+    nav {
+        display: flex;
+        padding: 0 1rem;
+        border-radius: 100px;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: max-content;
+        margin: 0 auto;
+        position: sticky;
+        top: 2rem;
+        z-index: 1000;
+
+        a {
+            padding: 0.5rem 0;
+            margin: 0.2rem 1.25rem;
+            text-decoration: none;
+            color: white;
+            opacity: 0.6;
+        }
+
+        a:hover {
+            opacity: 1;
         }
     }
 
-    main{
-        width: 100%;
-        margin: 0 auto;
-        margin-top: 7.5rem;
+    main {
+        padding: 1rem 3rem;
 
-        img{
-            width: 100%;
-        }
+        .title {
+            
+            
+            img {
+                width: 100%;
+                position: absolute;
+            }
 
-        .title{
-            position: absolute;
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            height: img;
-            bottom: 0;
+            div {
 
-            img{
-                width: 10%;
+                .upper {
+                    img {
+                        width: 3rem;
+                    }
+                }
             }
         }
     }

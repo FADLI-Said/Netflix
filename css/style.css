@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Narrow:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courgette&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans+Narrow:wght@400;700&display=swap");
 * {
@@ -6,75 +7,94 @@
 }
 
 body {
+  box-sizing: border-box;
   font-family: "Lato";
-  background-color: #1C2026;
-  color: white;
+  display: flex;
+  flex-direction: column;
+}
+body .background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  /* Place le fond derrière le contenu */
+}
+body .background-container .background-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* Couvre toute la zone sans déformer l'image */
+  filter: blur(1rem);
+  /* Applique un flou de 8 pixels */
+}
+body .background-container .background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.8);
 }
 body header {
-  background-image: linear-gradient(to bottom, #000000, transparent);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 body header .topbar {
-  width: 95%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-}
-body header .topbar .Netflix {
-  font-family: "Bebas Neue";
-  color: red;
-  font-size: 3rem;
-  background-color: transparent;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-image: linear-gradient(to bottom, #000000, transparent);
 }
 body header .topbar a {
-  color: black;
-  background-color: white;
   text-decoration: none;
-  align-self: center;
-  padding: 0.3rem 1rem;
-  border-radius: 1rem;
+}
+body header .topbar .Netflix {
+  color: red;
+  font-family: "Bebas Neue";
+  font-size: 3rem;
+}
+body header .topbar a:nth-child(2) {
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
   font-weight: bold;
 }
-body header nav {
-  text-align: center;
-  padding: 0.5rem 1rem;
-  background: #000000;
+body nav {
+  display: flex;
+  padding: 0 1rem;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.8);
   width: -moz-max-content;
   width: max-content;
-  border-radius: 1rem;
-  align-self: center;
   margin: 0 auto;
+  position: sticky;
+  top: 2rem;
+  z-index: 1000;
 }
-body header nav a {
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
+body nav a {
+  padding: 0.5rem 0;
+  margin: 0.2rem 1.25rem;
   text-decoration: none;
   color: white;
+  opacity: 0.6;
 }
-body header nav a:hover {
-  transition: 1.2s;
-  background-color: white;
-  color: #000000;
+body nav a:hover {
+  opacity: 1;
 }
 body main {
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 7.5rem;
-}
-body main img {
-  width: 100%;
-}
-body main .title {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: img;
-  bottom: 0;
+  padding: 1rem 3rem;
 }
 body main .title img {
-  width: 10%;
+  width: 100%;
+  position: absolute;
+}
+body main .title div .upper img {
+  width: 3rem;
 }/*# sourceMappingURL=style.css.map */
