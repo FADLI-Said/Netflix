@@ -95,9 +95,6 @@ body main {
   width: 95%;
   margin: 0 auto;
   margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 }
 body main .title {
   background-image: linear-gradient(to top, rgb(39, 39, 39), transparent), url(/img/img-principal.webp);
@@ -159,109 +156,95 @@ body main .title div:nth-of-type(2) a p i {
 body main .title div:nth-of-type(2) a p:hover {
   border: 1px white solid;
 }
-body main .description {
+body main .margin {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+body main .margin .description {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 80%;
-  margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(16px);
           backdrop-filter: blur(16px);
   padding: 1rem 2rem;
   border-radius: 1rem;
 }
-body main .description .bold {
+body main .margin .description .bold {
   font-weight: bold;
   display: flex;
   gap: 1rem;
   align-items: center;
 }
-body main .description .bold span {
+body main .margin .description .bold span {
   color: gray;
 }
-body main .description div {
+body main .margin .description div {
   display: flex;
   gap: 1rem;
 }
-body main .description div p {
+body main .margin .description div p {
   width: 50%;
 }
-body main .description div p:nth-of-type(1) {
+body main .margin .description div p:nth-of-type(1) {
   border-right: 1px solid gray;
 }
-body main #video {
-  width: 100%;
+body main .margin #video {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-body main #video h2 {
-  width: 80%;
-  margin: 0 auto;
-}
-body main #video .video {
+body main .margin #video .video {
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
-  width: 80%;
-  margin: 0 auto;
 }
-body main #video .video .teaser {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-}
-body main #video .video .teaser div {
+body main .margin #video .video .teaser div {
+  background-image: url(/img/teaser1.webp);
+  background-size: cover;
+  height: 10rem;
+  width: 18rem;
+  border-radius: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  background-image: url(/img/teaser1.webp);
-  background-size: cover;
-  width: 100%;
-  height: 13rem;
-  border-radius: 1rem;
   padding: 1rem;
 }
-body main #video .video .teaser div i {
+body main .margin #video .video .teaser div i {
   border: 2px solid white;
   padding: 0.5rem 0.5rem 0.5rem 0.7rem;
   border-radius: 50%;
 }
-body main #video .video .teaser div p {
+body main .margin #video .video .teaser div p {
   background-color: rgba(0, 0, 0, 0.9);
   -webkit-backdrop-filter: blur(16px);
           backdrop-filter: blur(16px);
   padding: 0 0.7rem;
   border-radius: 0.3rem;
 }
-body main #video .video .teaser h3 {
-  text-transform: uppercase;
-  color: gray;
-  font-size: 1rem;
-  letter-spacing: 0.2rem;
+body main .margin #video .video .teaser .teaser-2 {
+  background-image: url(/img/teaser-2.jpg);
 }
-body main #video .video .teaser p {
-  font-weight: bold;
-}
-body main #video .video .teaser .teaser-2 {
-  background-image: url(/img/teaser2.webp);
-}
-body main #video .video .teaser .teaser-3 {
+body main .margin #video .video .teaser .teaser-3 {
   background-image: url(/img/bande-annonce.webp);
 }
-body main .info {
-  width: 80%;
-  margin: 0 auto;
+body main .margin #video .video .teaser h3 {
+  text-transform: uppercase;
+  color: gray;
+}
+body main .margin .info {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-body main .info .info-2 {
+body main .margin .info .info-2 {
   display: flex;
   gap: 0.5rem;
 }
-body main .info .info-2 .info-3 {
+body main .margin .info .info-2 .info-3 {
   background-color: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(16px);
           backdrop-filter: blur(16px);
@@ -272,32 +255,344 @@ body main .info .info-2 .info-3 {
   gap: 0.5rem;
   width: 100%;
 }
-body main .info .info-2 .info-3 h3 {
+body main .margin .info .info-2 .info-3 h3 {
   font-size: 1rem;
 }
-body main .info .info-2 .info-3 p {
+body main .margin .info .info-2 .info-3 p {
   color: gray;
   font-weight: bold;
 }
-body footer {
-  margin-top: 2rem;
-  width: 80%;
-  margin: 0 auto;
+body main .margin #other-title .fleche {
+  display: flex;
+}
+body main .margin #other-title .fleche .photo {
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+body main .margin #other-title .fleche .photo img {
+  width: 10rem;
+  border-radius: 1rem;
+}
+body main .margin #other-title .fleche a {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  font-size: 1rem;
+  align-content: center;
+}
+body main .margin #offre {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+body main .margin #offre .prix {
+  display: flex;
+  gap: 0.5rem;
+}
+body main .margin #offre .prix div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px rgba(255, 255, 255, 0.3) solid;
+  border-radius: 1rem;
+}
+body main .margin #offre .prix div p {
+  display: flex;
+  gap: 1rem;
+}
+body main .margin #offre .prix div:nth-of-type(1) {
+  background-image: linear-gradient(to right bottom, #1d529d, #273f7a, #252d59, #1d1d3a, #120c1f);
+}
+body main .margin #offre .prix div:nth-of-type(2) {
+  background-image: linear-gradient(to right bottom, #792a95, #572779, #3a215b, #23193d, #120c1f);
+}
+body main .margin #offre .prix div:nth-of-type(3) {
+  background-image: linear-gradient(to right bottom, #922556, #6d2252, #491f46, #2a1835, #120c1f);
+}
+body main .margin .sub {
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  padding: 0.5rem 3rem;
+  border-radius: 100px;
+  font-size: 1.2rem;
+}
+body footer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 5rem;
+  width: 76%;
+  margin: 0 auto;
 }
 body footer ul {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
 }
 body footer ul li {
-  margin: 1rem;
-  flex: 0 0 calc(25% - 10px); /* 2 éléments par ligne sur les petits écrans */
+  margin: 1rem 0;
+  flex: 0 0 calc(25% - 10px);
+  /* 2 éléments par ligne sur les petits écrans */
 }
 body footer ul a {
   color: rgba(255, 255, 255, 0.7);
+}
+body footer div select {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+@media (max-width: 640px) {
+  body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  body .background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  body .background-container .background-image {
+    -o-object-fit: cover;
+       object-fit: cover;
+    filter: blur(0.5rem);
+  }
+  body header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+  body header .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  body header .topbar .Netflix {
+    font-size: 2rem;
+    color: red;
+  }
+  body header .topbar a:nth-child(2) {
+    background-color: white;
+    color: black;
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 100px;
+    text-decoration: none;
+  }
+  body nav {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0;
+    top: 2rem;
+  }
+  body nav a {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 90px;
+    text-decoration: none;
+    color: white;
+    opacity: 0.6;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  body nav a:hover {
+    opacity: 1;
+  }
+  body main {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  body main .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    padding: 1rem;
+    background-size: 100vh;
+    background-position: center;
+    height: 60vh;
+  }
+  body main .title div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  body main .title div:nth-of-type(1) img:nth-of-type(1) {
+    width: 3rem;
+  }
+  body main .title div:nth-of-type(1) img:nth-of-type(2) {
+    width: 12rem;
+  }
+  body main .title div:nth-of-type(1) a {
+    padding: 0.4rem 2rem;
+    font-size: 0.9rem;
+  }
+  body main .title div:nth-of-type(1) p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  body main .title div:nth-of-type(2) a {
+    text-decoration: none;
+  }
+  body main .title div:nth-of-type(2) a p {
+    padding: 0.4rem 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  body main .margin {
+    width: 90%;
+    gap: 1rem;
+  }
+  body main .margin .description {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+  }
+  body main .margin .description .bold {
+    display: flex;
+    align-items: flex-start;
+  }
+  body main .margin .description div {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .margin .description div p {
+    width: 100%;
+  }
+  body main .margin .description div p:nth-of-type(1) {
+    border-right: none;
+  }
+  body main .margin .video {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  body main .margin .video .teaser div {
+    height: 8rem;
+    background-size: cover;
+    border-radius: 1rem;
+  }
+  body main .margin .info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  body main .margin .info .info-2 {
+    flex-direction: column;
+  }
+  body main .margin .info .info-2 .info-3 {
+    padding: 1rem 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+  }
+  body main .margin .info .info-2 .info-3 h3 {
+    font-size: 0.9rem;
+  }
+  body main .margin .info .info-2 .info-3 p {
+    font-size: 0.8rem;
+  }
+  body main .margin #other-title .photo {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+  }
+  body main .margin #other-title .photo img {
+    width: 8rem;
+    border-radius: 1rem;
+  }
+  body main .margin #other-title a {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  body main .margin #offre {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .margin #offre .prix {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  body main .margin #offre .prix div {
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+  }
+  body main .margin #offre .prix div p {
+    display: flex;
+    gap: 0.3rem;
+  }
+  body main .margin .sub {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+    margin: 1rem auto;
+  }
+  body footer {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 90%;
+  }
+  body footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  body footer ul li {
+    text-align: center;
+  }
+  body footer ul a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  body footer div select {
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=style.css.map */
